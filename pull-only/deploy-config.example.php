@@ -28,7 +28,21 @@ define('SECRET_ACCESS_TOKEN', 'BetterChangeMeNowOrSufferTheConsequences');
  *
  * @var string
  */
-define('REMOTE_REPOSITORY', 'https://github.com/markomarkovic/simple-php-git-deploy.git');
+define('REMOTE_REPOSITORY', 'https://github.com/trial-trl/php-git-deploy.git');
+
+/**
+ * The path to the SSH key.
+ *
+ * @var string
+ */
+define('SSH_PRIVATE_KEY', '/tmp/trl-php-git-deploy/key.pem');
+
+/**
+ * The path to the SSH key pass file.
+ *
+ * @var string
+ */
+define('SSH_PRIVATE_KEY_PASSFILE', '/tmp/trl-php-git-deploy/key-pass');
 
 /**
  * The branch that's being deployed.
@@ -36,7 +50,7 @@ define('REMOTE_REPOSITORY', 'https://github.com/markomarkovic/simple-php-git-dep
  *
  * @var string
  */
-define('BRANCH', 'master');
+define('BRANCH', 'main');
 
 /**
  * The location that the code is going to be deployed to.
@@ -44,7 +58,7 @@ define('BRANCH', 'master');
  *
  * @var string Full path including the trailing slash
  */
-define('TARGET_DIR', '/tmp/simple-php-git-deploy/');
+define('TARGET_DIR', '/tmp/trl-php-git-deploy/');
 
 /**
  * Whether to delete the files that are not in the repository but are on the
@@ -79,7 +93,7 @@ define('EXCLUDE', serialize(array(
  *
  * @var string Full path including the trailing slash
  */
-define('TMP_DIR', '/tmp/spgd-'.md5(REMOTE_REPOSITORY).'/');
+define('TMP_DIR', '/tmp/tpgd-'.md5(REMOTE_REPOSITORY).'/');
 
 /**
  * Whether to remove the TMP_DIR after the deployment.
